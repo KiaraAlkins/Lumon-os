@@ -7,3 +7,5 @@ setTimeout(() => {
         sectionFirstScreen.classList.add('fade-out');
     }, 100);
 }, 5000)
+
+// teste de commit
