@@ -7,3 +7,48 @@ setTimeout(() => {
         sectionFirstScreen.classList.add('fade-out');
     }, 100);
 }, 5000)
+
+// Relógio digital de canto na tela inicial
+
+function atualizarTempo() {
+    const displayHorario = document.getElementById('inicialscr-horario');
+    const displayData = document.getElementById('inicialsrc-data');
+    const displayAno = document.getElementById('inicialsrc-ano');
+
+    const agora = new Date();
+    const horario = corrigirHorario(agora.getHours()) + ':' + corrigirHorario(agora.getMinutes());
+
+    const meses = [
+        'Janeiro',
+        'Fevereiro',
+        'Março',
+        'Abril',
+        'Maio',
+        'Junho',
+        'Julho',
+        'Agosto',
+        'Setembro',
+        'Outubro',
+        'Novembro',
+        'Dezembro'
+    ];
+
+    const dia = agora.getDate();
+    const mes = meses[agora.getMonth()];
+    const ano = agora.getFullYear();
+
+    const data = dia + " de " + mes
+
+    displayAno.textContent = ano
+    displayData.textContent = data
+    displayHorario.textContent = horario
+}
+
+function corrigirHorario(number) {
+    if (number < 10) {
+        number = '0' + number
+    }
+    return number
+}
+
+setInterval(atualizarTempo, 1000)
