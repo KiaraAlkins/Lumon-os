@@ -627,3 +627,10 @@ body:has(#toggle:checked) .svgLogo {
     color: #1F2A39;
     transition: 0.5;
 }
+
+/* DesktopMain */
+
+.mainDesktop {
+    height: 100vh;
+    background-color: #192634;
+}
