@@ -137,6 +137,8 @@ body {
     pointer-events: none;
 
     z-index: 1;
+
+    transition: 0.5s;
 }
 
 .border-password-screen {
@@ -148,6 +150,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
 }
 
 .password-screen-Section header {
@@ -167,6 +170,11 @@ body {
     width: 100%;
 }
 
+.svgLogo {
+    color: white;
+    transition: .5s;
+}
+
 .leftHeader {
     margin-left: 40px;
     line-height: 1;
@@ -174,6 +182,7 @@ body {
     flex-direction: column;
     gap: 11px;
     color: #fff;
+    transition: 0.5s;
 }
 
 .rightHeader {
@@ -182,12 +191,14 @@ body {
     gap: 10px;
     opacity: 0.8;
     color: #6C7B90;
+    transition: 0.5s;
 }
 
 .divider {
   width: 2px;
   height: 18px;
   background: rgb(255, 255, 255);
+  transition: 0.5s;
 }
 
 .statusdot {
@@ -196,6 +207,7 @@ body {
   background: #4f8fff;
   border-radius: 50%;
   box-shadow: 0 0 6px rgba(79, 143, 255, 0.5);
+  transition: 0.5s;
 }
 
 
@@ -209,6 +221,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    transition: 0.5s;
 }
 
 .container-passwordscr-grid {
@@ -225,6 +238,7 @@ body {
     font-size: 72px;
     text-align: end;
     margin-right: 190px;
+    transition: 0.5s;
 }
 
 
@@ -233,16 +247,19 @@ body {
     height: 500px;
     border: 1px solid #547AAF;
     border-radius: 20px;
+    transition: 0.5s;
 }
 
 .divSeparadora-Containerforpassword {
     width: 80%;
+    transition: 0.5s;
 }
 
 .divSeparadora-Containerforpassword p {
     font-family: "LumonFont";
     font-size: 10px;
     color: #fff;
+    transition: 0.5s;
 }
 
 .containerforpassword {
@@ -258,6 +275,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 25px;
+    transition: 0.5s;
 }
 
 .typePassword {
@@ -273,6 +291,7 @@ body {
     font-family: "LumonFont";
     font-size: 16px;
     border-radius: 9px;
+    transition: 0.5s;
 }
 
 .passwordscr-footer {
@@ -285,6 +304,7 @@ body {
     font-size: 12px;
     margin-top: 50px;
     margin-bottom: 32px;
+    transition: 0.5s;
 }
 
 .container-datestatus {
@@ -301,6 +321,7 @@ body {
     color: #ffffff;
     font-size: 12px;
     gap: 20px;
+    transition: 0.5s;
 }
 
 .container-systemstatus {
@@ -315,17 +336,20 @@ body {
   height: 40px;
   background: rgb(255, 255, 255);
   margin-right: 20px;
+  transition: 0.5s;
 }
 
 .container-systemstatus h2 {
     font-family: 12px;   
     margin-bottom: 10px;
+    transition: 0.5s;
 }
 
 .container-footer-darker p {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-size: medium;
+    transition: 0.5s;
 }
 
 .p-greendot {
@@ -356,6 +380,7 @@ body {
     width: 1px;
     height: 40px;
     background: rgb(255, 255, 255);
+    transition: 0.5s;
 }
 
 .container-datestatus p {
@@ -401,9 +426,11 @@ body {
     width: 75px;
     height: 40px;
     border-radius: 999px;
-    background-color: #f3f3f3;
-    box-shadow: 2px 1px 7.5px rgba(0, 0, 0, 0.5) inset,
-    -0.5px -0.5px 2px rgba(0, 0, 0, 0.25);
+
+    background-color: #192634;
+    box-shadow: 1px 1px 7.5px rgba(0, 0, 0, 0.5) inset,
+    1px 1px 7.5px rgba(255, 255, 255, 0.25);
+
     cursor: pointer;
     position: relative;
     transition: 0.5s;
@@ -419,13 +446,14 @@ body {
     height: 30px;
     border: none;
     border-radius: 99px;
-    background-color: white;
-    box-shadow: 1px 1px 7.5px rgba(0, 0, 0, 0.5),
-    2px -2px 5px rgb(0, 0, 0, 0.5) inset;
     position: absolute;
     top: 50%;
-    left: 0;
-    transform: translate(10%, -50%);
+    left: 100%;
+    transform: translate(-110%, -50%);
+    background-color: #1F2A39;
+    box-shadow: 1px 1px 7.5px rgba(0, 0, 0, 0.5),
+    -1px -1px 4px rgba(0, 0, 0, 0.5) inset;
+    transition: 0.5s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -441,16 +469,16 @@ body {
 
 .sun {
     color: #1F1F21;
-    margin-top: 0%;
-    opacity: 1;
     transition: 0.5s;
+    margin-top: 150%;
+    opacity: 0;
 }
 
 .moon {
-    margin-top: -150%;
     color: white;
-    opacity: 0;
     transition: 0.5s;
+    margin-top: 0%;
+    opacity: 1;
 }
 
 #toggle:checked + .displaycheckbox {
@@ -459,30 +487,116 @@ body {
 }
 
 #toggle:checked + .displaycheckbox label {
-    background-color: #1F1F21;
-    box-shadow: 1px 1px 7.5px rgba(0, 0, 0, 0.5) inset,
-    1px 1px 7.5px rgba(255, 255, 255, 0.25);
+    background-color: #f3f3f3;
+    box-shadow: 2px 1px 7.5px rgba(0, 0, 0, 0.5) inset,
+    -0.5px -0.5px 2px rgba(0, 0, 0, 0.25);
 }
 
 #toggle:checked + .displaycheckbox label .circle {
-    left: 100%;
-    transform: translate(-110%, -50%);
-    background-color: #3e3e42;
-    box-shadow: 1px 1px 7.5px rgba(255, 255, 255, 0.5),
-    -0.5px -0.5px -2px rgba(255, 255, 255, 0.5) inset;
-    transition: 0.5s;
+    background-color: white;
+    box-shadow: 1px 1px 7.5px rgba(0, 0, 0, 0.5),
+    2px -2px 5px rgb(0, 0, 0, 0.5) inset;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(10%, -50%);
 }
 
 #toggle:checked + .displaycheckbox label .circle .sun {
-    margin-top: 150%;
-    opacity: 0;
-}
-
-#toggle:checked + .displaycheckbox label .circle .moon {
     margin-top: 0%;
     opacity: 1;
 }
 
+#toggle:checked + .displaycheckbox label .circle .moon {
+    margin-top: -150%;
+    opacity: 0;
+}
+
 .label:active .circle {
     width: 200px;
+}
+
+/*  */
+/* MODO SEM VISÃO NOTURNA */
+/*  */
+
+body:has(#toggle:checked) {
+    background-color: #E6E8EE;
+    transition: 0.5s;
+}
+
+/* Tela principal */
+body:has(#toggle:checked) .password-screen-Section {
+    background-color: #E6E8EE;
+    transition: 0.5s;
+}
+
+/* Borda principal */
+body:has(#toggle:checked) .border-password-screen {
+    border-color: #C9D1DC;
+    transition: 0.5s;
+}
+
+/* Container interno */
+body:has(#toggle:checked) .container-passwordscreen-darker {
+    background-color: #F5F7FA;
+    transition: 0.5s;
+}
+
+/* Header */
+body:has(#toggle:checked) .leftHeader,
+body:has(#toggle:checked) .passwordscr-footer,
+body:has(#toggle:checked) .container-footer-darker,
+body:has(#toggle:checked) .password-screen-title,
+body:has(#toggle:checked) .container-datestatus p,
+body:has(#toggle:checked) .divSeparadora-Containerforpassword p {
+    color: #1F2A39;
+    transition: 0.5s;
+}
+
+/* Texto secundário */
+body:has(#toggle:checked) .rightHeader {
+    color: #5F6D80;
+    transition: 0.5s;
+}
+
+/* Divisórias */
+body:has(#toggle:checked) .divider,
+body:has(#toggle:checked) .divider2,
+body:has(#toggle:checked) .divider3 {
+    background: #C9D1DC;
+    transition: 0.5s;
+}
+
+/* Linha do meio */
+body:has(#toggle:checked) .password-screen-Section hr {
+    border-color: #C9D1DC;
+    transition: 0.5s;
+}
+
+/* Caixa de login */
+body:has(#toggle:checked) .containerforpassword {
+    background-color: #FFFFFF;
+    border: 1px solid #D7DCE3;
+    transition: 0.5s;
+}
+
+/* Inputs */
+body:has(#toggle:checked) .typePassword {
+    background: #F3F5F8;
+    border: 1px solid #D4DAE3;
+    color: #1F2A39;
+    transition: 0.5s;
+}
+
+/* Botão */
+body:has(#toggle:checked) .submitButton {
+    background-color: #1F2A39;
+    color: white;
+    transition: 0.5s;
+}
+
+body:has(#toggle:checked) .svgLogo {
+    color: #1F2A39;
+    transition: 0.5;
 }
