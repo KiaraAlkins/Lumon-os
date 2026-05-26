@@ -8,7 +8,7 @@ setTimeout(() => {
     setTimeout(() => {
         sectionFirstScreen.classList.add('fade-out');
     }, 100);
-}, 5000)
+}, 1000)
 
 // Relógio digital de canto na tela inicial
 
@@ -20,26 +20,13 @@ export function atualizarTempo() {
     const agora = new Date();
     const horario = corrigirHorario(agora.getHours()) + ':' + corrigirHorario(agora.getMinutes());
 
-    const meses = [
-        'Janeiro',
-        'Fevereiro',
-        'Março',
-        'Abril',
-        'Maio',
-        'Junho',
-        'Julho',
-        'Agosto',
-        'Setembro',
-        'Outubro',
-        'Novembro',
-        'Dezembro'
-    ];
+    const meses = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
     const dia = agora.getDate();
     const mes = meses[agora.getMonth()];
     const ano = agora.getFullYear();
 
-    const data = dia + " de " + mes
+    const data = mes + " " + dia;
 
     displayAno.textContent = ano
     displayData.textContent = data
@@ -55,7 +42,7 @@ function corrigirHorario(number) {
 
 // Senha de acesso
 
-let password = "KierEagan";
+let password = "";
 
 const inputPassword = document.querySelector('.typePassword');
 const submitButton = document.querySelector('.submitButton');

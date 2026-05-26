@@ -712,6 +712,53 @@ body:has(#toggle:checked) .svgLogo {
     border-radius: 10px;
     padding: 22px;
     min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #78808E;
+    gap: 25px;
+    position: relative;
+}
+
+.arrow {
+    width: 8px;
+    height: 8px;
+    border: none;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 16px;
+}
+
+.container-in-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px
+}
+
+.container-in-widget > :nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.text-temperature {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1F1F21;
+}
+
+.container-temperature-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
 }
 
 .desktopDock {

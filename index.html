@@ -178,10 +178,31 @@
         </main>
 
         <section class="desktopWidgets">
-            <div class="widget">Your environment is prepared.</div>
-            <div class="widget">Calendar</div>
-            <div class="widget">Weather</div>
-            <div class="widget">Wellness</div>
+            <div class="widget">Your environment is prepared.
+                <button class="arrow"></button>
+            </div>
+            <div class="widget">Calendar
+                <button class="arrow"></button>
+            </div>
+            <div class="widget">Weather 
+                <button class="arrow"></button>
+                <div class="container-in-widget">
+                    <div>
+                        <svg width="46" height="31" viewBox="0 0 46 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M36.2727 13.3637C40.4901 13.3637 43.9091 16.7826 43.9091 21.0001C43.9091 25.2175 40.4901 28.6365 36.2727 28.6365L11.4545 28.6366C6.1827 28.6366 1.90906 24.3625 1.90906 19.0907C1.90906 14.0316 5.84573 9.89194 10.8225 9.56619C12.9631 5.04016 17.57 1.90918 22.9091 1.90918C29.6418 1.90918 35.2126 6.88813 36.1385 13.3649C36.1834 13.3641 36.2275 13.3637 36.2727 13.3637Z" stroke="#091B2D" stroke-width="3.81818" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p class="text-temperature">18°</p>
+                        <div class="container-temperature-details">
+                            <p id="descriptionTemp">Cloudy</p>
+                            <p id="higherlowerTemp">H: 21° L: 12°</p>
+                        </div>
+                    </div>
+                    <p class="cidadeTemp"></p>
+                </div>
+            </div>
+            <div class="widget">Wellness
+                <button class="arrow"></button>
+            </div>
         </section>
 
         <nav class="desktopDock">
@@ -194,5 +215,6 @@
     </section>
 
     <script type="module" src="/main.js"></script>
+    <script type="module" src="/desktopLumon.js"></script>
 </body>
 </html>
